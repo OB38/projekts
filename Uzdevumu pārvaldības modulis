@@ -1,0 +1,16 @@
+// AddTaskForm.cs
+private void btnSave_Click(object sender, EventArgs e)
+{
+    string title = txtTitle.Text;
+    string description = txtDescription.Text;
+    DateTime dueDate = dtpDueDate.Value;
+    string priority = cmbPriority.SelectedItem.ToString();
+
+    SaveTaskToDatabase(title, description, dueDate, priority);
+    this.Close();
+}
+
+private void SaveTaskToDatabase(string title, string description, DateTime dueDate, string priority)
+{
+    // Saglabāt uzdevumu datu bāzē
+}
