@@ -1,0 +1,23 @@
+// FormLogin.cs
+private void btnLogin_Click(object sender, EventArgs e)
+{
+    string email = txtEmail.Text;
+    string password = txtPassword.Text;
+
+    if (AuthenticateUser(email, password))
+    {
+        MainForm mainForm = new MainForm();
+        mainForm.Show();
+        this.Hide();
+    }
+    else
+    {
+        MessageBox.Show("Invalid email or password.");
+    }
+}
+
+private bool AuthenticateUser(string email, string password)
+{
+    // Pārbaude datu bāzē
+    return true; // Vienkāršots piemērs
+}
