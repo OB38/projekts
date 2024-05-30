@@ -1,0 +1,10 @@
+// ViewTasksForm.cs
+private void ViewTasksForm_Load(object sender, EventArgs e)
+{
+    LoadTasksFromDatabase();
+}
+
+private void LoadTasksFromDatabase()
+{
+    // Ielādēt uzdevumus un pievienot tos sarakstam
+}
