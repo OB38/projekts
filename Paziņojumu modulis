@@ -1,0 +1,20 @@
+// NotificationService.cs
+public void CheckForDueTasks()
+{
+    var dueTasks = GetDueTasksFromDatabase();
+    foreach (var task in dueTasks)
+    {
+        ShowNotification(task);
+    }
+}
+
+private List<Task> GetDueTasksFromDatabase()
+{
+    // Iegūt uzdevumus no datu bāzes, kuriem tuvojas termiņš
+    return new List<Task>(); // Vienkāršots piemērs
+}
+
+private void ShowNotification(Task task)
+{
+    MessageBox.Show($"Task '{task.Title}' is due soon!", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
+}
